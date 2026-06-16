@@ -1,54 +1,69 @@
 {
   "version": "1.0",
-  "timestamp": "2026-06-16 17:08:08",
+  "timestamp": "2026-06-16 20:29:44",
   "students": {
     "QQZH6A": {
       "name": "فارس عبدالسميع السيد السيسي",
       "stage": "الصف الخامس الابتدائي",
       "code": "STU-2606-0001",
       "period": "يونيو (06) - 2026",
-      "overall": 100,
-      "is_eval": false,
-      "last_exam_text": "لا يوجد",
+      "overall": 83,
+      "is_eval": true,
+      "last_exam_text": "15.5 / 20",
       "metrics": {
-        "attendance": 100,
+        "attendance": 92,
         "homework": 100,
-        "exams": 0
+        "exams": 78
       },
       "trends": {
-        "attendance": 0,
+        "attendance": -8,
         "homework": 0,
-        "exams": 0
+        "exams": 78
       },
       "ai": {
-        "strength": "التزام كامل بالحضور بنسبة 100% دون تسجيل أي غياب.",
+        "strength": "تسليم منتظم وممتاز للواجبات المطلوبة بنسبة التزام (100%).",
         "weakness": "لا توجد نقاط ضعف جوهرية حالياً، والمستوى مستقر بشكل عام ولله الحمد.",
         "recommendation": "الاستمرار بنفس معدل الأداء مع زيادة التدريب على الأسئلة المتقدمة لضمان البقاء في القمة."
       },
       "chart": {
-        "labels": [],
-        "data": [],
-        "max": 20
+        "labels": [
+          "15"
+        ],
+        "data": [
+          15.5
+        ],
+        "max": 20.0
       },
-      "timeline": []
+      "timeline": [
+        {
+          "date": "2026-06-16",
+          "type": "bad",
+          "text": "غياب عن الحصة"
+        },
+        {
+          "date": "2026-06-16",
+          "type": "good",
+          "text": "أدى امتحان: 15 (15.5/20)"
+        }
+      ]
     },
     "ACXKMJ": {
       "name": "رهف عبدالسميع السيد السيسي",
       "stage": "الصف الخامس الابتدائي",
       "code": "STU-2606-0002",
       "period": "يونيو (06) - 2026",
-      "overall": 100,
-      "is_eval": false,
-      "last_exam_text": "لا يوجد",
+      "overall": 85,
+      "is_eval": true,
+      "last_exam_text": "16 / 20",
       "metrics": {
         "attendance": 100,
         "homework": 100,
-        "exams": 0
+        "exams": 80
       },
       "trends": {
         "attendance": 0,
         "homework": 0,
-        "exams": 0
+        "exams": 80
       },
       "ai": {
         "strength": "التزام كامل بالحضور بنسبة 100% دون تسجيل أي غياب.",
@@ -56,89 +71,124 @@
         "recommendation": "الاستمرار بنفس معدل الأداء مع زيادة التدريب على الأسئلة المتقدمة لضمان البقاء في القمة."
       },
       "chart": {
-        "labels": [],
-        "data": [],
-        "max": 20
+        "labels": [
+          "15"
+        ],
+        "data": [
+          16.0
+        ],
+        "max": 20.0
       },
-      "timeline": []
+      "timeline": [
+        {
+          "date": "2026-06-16",
+          "type": "good",
+          "text": "أدى امتحان: 15 (16/20)"
+        }
+      ]
     },
     "LJCB7Z": {
       "name": "احمد عبدالحكيم السيسي",
       "stage": "الصف الخامس الابتدائي",
       "code": "STU-2606-0003",
       "period": "يونيو (06) - 2026",
-      "overall": 100,
-      "is_eval": false,
-      "last_exam_text": "لا يوجد",
+      "overall": 93,
+      "is_eval": true,
+      "last_exam_text": "18 / 20",
       "metrics": {
         "attendance": 100,
         "homework": 100,
-        "exams": 0
+        "exams": 90
       },
       "trends": {
         "attendance": 0,
         "homework": 0,
-        "exams": 0
+        "exams": 90
       },
       "ai": {
-        "strength": "التزام كامل بالحضور بنسبة 100% دون تسجيل أي غياب.",
+        "strength": "أداء أكاديمي فائق بمتوسط درجات (90%) في الامتحانات الأخيرة.",
         "weakness": "لا توجد نقاط ضعف جوهرية حالياً، والمستوى مستقر بشكل عام ولله الحمد.",
         "recommendation": "الاستمرار بنفس معدل الأداء مع زيادة التدريب على الأسئلة المتقدمة لضمان البقاء في القمة."
       },
       "chart": {
-        "labels": [],
-        "data": [],
-        "max": 20
+        "labels": [
+          "15"
+        ],
+        "data": [
+          18.0
+        ],
+        "max": 20.0
       },
-      "timeline": []
+      "timeline": [
+        {
+          "date": "2026-06-16",
+          "type": "good",
+          "text": "أدى امتحان: 15 (18/20)"
+        }
+      ]
     },
     "ZQU8Z3": {
       "name": "ادهم عبدالحكيم السيسي",
       "stage": "الصف الخامس الابتدائي",
       "code": "STU-2606-0004",
       "period": "يونيو (06) - 2026",
-      "overall": 100,
-      "is_eval": false,
-      "last_exam_text": "لا يوجد",
+      "overall": 98,
+      "is_eval": true,
+      "last_exam_text": "19.5 / 20",
       "metrics": {
-        "attendance": 100,
+        "attendance": 92,
         "homework": 100,
-        "exams": 0
+        "exams": 98
       },
       "trends": {
-        "attendance": 0,
+        "attendance": -8,
         "homework": 0,
-        "exams": 0
+        "exams": 98
       },
       "ai": {
-        "strength": "التزام كامل بالحضور بنسبة 100% دون تسجيل أي غياب.",
+        "strength": "أداء أكاديمي فائق بمتوسط درجات (98%) في الامتحانات الأخيرة.",
         "weakness": "لا توجد نقاط ضعف جوهرية حالياً، والمستوى مستقر بشكل عام ولله الحمد.",
         "recommendation": "الاستمرار بنفس معدل الأداء مع زيادة التدريب على الأسئلة المتقدمة لضمان البقاء في القمة."
       },
       "chart": {
-        "labels": [],
-        "data": [],
-        "max": 20
+        "labels": [
+          "15"
+        ],
+        "data": [
+          19.5
+        ],
+        "max": 20.0
       },
-      "timeline": []
+      "timeline": [
+        {
+          "date": "2026-06-16",
+          "type": "bad",
+          "text": "غياب عن الحصة"
+        },
+        {
+          "date": "2026-06-16",
+          "type": "good",
+          "text": "أدى امتحان: 15 (19.5/20)"
+        }
+      ]
     },
     "UGDUY4": {
       "name": "احمد محمد",
       "stage": "الصف الخامس الابتدائي",
       "code": "STU-2606-0005",
       "period": "يونيو (06) - 2026",
-      "overall": 100,
-      "is_eval": false,
-      "last_exam_text": "لا يوجد",
+      "overall": 89,
+      "is_eval": true,
+      "last_exam_text": "17 / 20",
       "metrics": {
         "attendance": 100,
         "homework": 100,
-        "exams": 0
+        "exams": 85
       },
       "trends": {
         "attendance": 0,
         "homework": 0,
-        "exams": 0
+        "exams": 85
       },
       "ai": {
         "strength": "التزام كامل بالحضور بنسبة 100% دون تسجيل أي غياب.",
@@ -146,46 +196,26 @@
         "recommendation": "الاستمرار بنفس معدل الأداء مع زيادة التدريب على الأسئلة المتقدمة لضمان البقاء في القمة."
       },
       "chart": {
-        "labels": [],
-        "data": [],
-        "max": 20
+        "labels": [
+          "15"
+        ],
+        "data": [
+          17.0
+        ],
+        "max": 20.0
       },
-      "timeline": []
+      "timeline": [
+        {
+          "date": "2026-06-16",
+          "type": "good",
+          "text": "أدى امتحان: 15 (17/20)"
+        }
+      ]
     },
     "WZ3C6P": {
       "name": "محمد احمد",
       "stage": "الصف السادس الابتدائي",
       "code": "STU-2606-0006",
-      "period": "يونيو (06) - 2026",
-      "overall": 100,
-      "is_eval": false,
-      "last_exam_text": "لا يوجد",
-      "metrics": {
-        "attendance": 100,
-        "homework": 100,
-        "exams": 0
-      },
-      "trends": {
-        "attendance": 0,
-        "homework": 0,
-        "exams": 0
-      },
-      "ai": {
-        "strength": "التزام كامل بالحضور بنسبة 100% دون تسجيل أي غياب.",
-        "weakness": "لا توجد نقاط ضعف جوهرية حالياً، والمستوى مستقر بشكل عام ولله الحمد.",
-        "recommendation": "الاستمرار بنفس معدل الأداء مع زيادة التدريب على الأسئلة المتقدمة لضمان البقاء في القمة."
-      },
-      "chart": {
-        "labels": [],
-        "data": [],
-        "max": 20
-      },
-      "timeline": []
-    },
-    "WCV6LL": {
-      "name": "محمد احمد",
-      "stage": "الصف الأول الإعدادي",
-      "code": "STU-2606-0007",
       "period": "يونيو (06) - 2026",
       "overall": 100,
       "is_eval": false,
@@ -277,18 +307,18 @@
       "stage": "الصف الخامس الابتدائي",
       "code": "STU-2606-0010",
       "period": "يونيو (06) - 2026",
-      "overall": 100,
-      "is_eval": false,
-      "last_exam_text": "لا يوجد",
+      "overall": 82,
+      "is_eval": true,
+      "last_exam_text": "15 / 20",
       "metrics": {
         "attendance": 100,
         "homework": 100,
-        "exams": 0
+        "exams": 75
       },
       "trends": {
         "attendance": 0,
         "homework": 0,
-        "exams": 0
+        "exams": 75
       },
       "ai": {
         "strength": "التزام كامل بالحضور بنسبة 100% دون تسجيل أي غياب.",
@@ -296,28 +326,38 @@
         "recommendation": "الاستمرار بنفس معدل الأداء مع زيادة التدريب على الأسئلة المتقدمة لضمان البقاء في القمة."
       },
       "chart": {
-        "labels": [],
-        "data": [],
-        "max": 20
+        "labels": [
+          "15"
+        ],
+        "data": [
+          15.0
+        ],
+        "max": 20.0
       },
-      "timeline": []
+      "timeline": [
+        {
+          "date": "2026-06-16",
+          "type": "good",
+          "text": "أدى امتحان: 15 (15/20)"
+        }
+      ]
     },
     "5HZKLS": {
       "name": "عبدالحكيم السيد",
       "stage": "الصف الخامس الابتدائي",
       "code": "STU-2606-0011",
       "period": "يونيو (06) - 2026",
-      "overall": 100,
+      "overall": 96,
       "is_eval": false,
       "last_exam_text": "لا يوجد",
       "metrics": {
         "attendance": 100,
-        "homework": 100,
+        "homework": 88,
         "exams": 0
       },
       "trends": {
         "attendance": 0,
-        "homework": 0,
+        "homework": -12,
         "exams": 0
       },
       "ai": {
@@ -330,7 +370,13 @@
         "data": [],
         "max": 20
       },
-      "timeline": []
+      "timeline": [
+        {
+          "date": "2026-06-16",
+          "type": "warning",
+          "text": "تقصير في واجب: 16"
+        }
+      ]
     },
     "HNBKJ9": {
       "name": "ريهام السيد السيسي",
