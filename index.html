@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بوابة أولياء الأمور | دكتور علوم</title>
+    <title>بوابة أولياء الأمور | التقرير الذكي</title>
     
     <!-- الخطوط والتصميم -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -11,37 +11,44 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>
-        body { font-family: 'Cairo', sans-serif; background-color: #f8fafc; }
-        .glass-card { background: white; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); border: 1px solid #e2e8f0; }
-        .trend-up { color: #10b981; font-weight: bold; font-size: 0.85rem; }
-        .trend-down { color: #ef4444; font-weight: bold; font-size: 0.85rem; }
-        .trend-neutral { color: #64748b; font-weight: bold; font-size: 0.85rem; }
+        body { font-family: 'Cairo', sans-serif; background-color: #f4f7f6; color: #333; }
         
-        /* شاشة الدخول */
+        /* كروت زجاجية احترافية بظلال ناعمة */
+        .premium-card { background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eef2f5; transition: transform 0.2s ease; }
+        .premium-card:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+        
+        /* ألوان الكروت العلوية المطابقة لتصميمك */
+        .card-blue { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; border: none; }
+        .card-green { background: linear-gradient(135deg, #20E2D7 0%, #1db8ac 100%); color: white; border: none; }
+        
+        .trend-up { color: #10b981; font-weight: bold; font-size: 0.85rem; background: #ecfdf5; padding: 2px 8px; border-radius: 12px;}
+        .trend-down { color: #ef4444; font-weight: bold; font-size: 0.85rem; background: #fef2f2; padding: 2px 8px; border-radius: 12px;}
+        .trend-neutral { color: #64748b; font-weight: bold; font-size: 0.85rem; background: #f1f5f9; padding: 2px 8px; border-radius: 12px;}
+        
         #login-screen { display: flex; min-height: 100vh; align-items: center; justify-content: center; }
-        #dashboard-screen { display: none; padding: 2rem 1rem; max-width: 1000px; margin: 0 auto; }
+        #dashboard-screen { display: none; padding: 2rem 1rem; max-width: 900px; margin: 0 auto; }
         
-        .loader { border: 4px solid #f3f3f6; border-top: 4px solid #0ea5e9; border-radius: 50%; width: 30px; height: 30px; animation: spin 1s linear infinite; display: none; margin: 0 auto; }
+        .loader { border: 4px solid #f3f3f6; border-top: 4px solid #14b8a6; border-radius: 50%; width: 35px; height: 35px; animation: spin 1s linear infinite; display: none; margin: 0 auto; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
     </style>
 </head>
-<body class="text-slate-800">
+<body>
 
     <!-- شاشة تسجيل الدخول -->
-    <div id="login-screen" class="bg-gradient-to-br from-slate-50 to-slate-100">
-        <div class="glass-card p-8 w-full max-w-md text-center">
-            <div class="w-24 h-24 bg-teal-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-4xl shadow-lg">
+    <div id="login-screen">
+        <div class="premium-card p-8 w-full max-w-md text-center border-t-4 border-t-teal-500">
+            <div class="w-20 h-20 bg-slate-800 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-3xl shadow-lg">
                 🎓
             </div>
-            <h1 class="text-2xl font-bold text-teal-800 mb-2">بوابة التقرير الذكي</h1>
-            <p class="text-slate-500 mb-8 text-sm">مرحباً بك في نظام المتابعة الخاص بدكتور علوم. يرجى إدخال الكود السري الخاص بالطالب.</p>
+            <h1 class="text-2xl font-bold text-slate-800 mb-2">بوابة المتابعة لولي الأمر</h1>
+            <p class="text-slate-500 mb-6 text-sm">يرجى إدخال الكود السري المكون من حروف وأرقام للاطلاع على التقرير.</p>
             
-            <input type="text" id="token-input" placeholder="مثال: HNBKJ9" class="w-full text-center p-4 text-xl tracking-widest font-bold border-2 border-slate-200 rounded-xl focus:border-teal-500 focus:outline-none uppercase mb-4 transition-colors">
+            <input type="text" id="token-input" placeholder="مثال: HNBKJ9" class="w-full text-center p-4 text-2xl tracking-[0.2em] font-extrabold border-2 border-slate-200 rounded-xl focus:border-teal-500 focus:outline-none uppercase mb-5 text-slate-700 bg-slate-50">
             
-            <button onclick="login()" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 px-8 rounded-xl transition-colors shadow-md text-lg">
-                عرض التقرير 🚀
+            <button onclick="login()" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-xl transition-colors shadow-md text-lg">
+                دخول 🚀
             </button>
-            <div id="error-msg" class="text-red-500 font-bold mt-4 hidden">الكود السري غير صحيح أو لا توجد بيانات مسجلة.</div>
+            <div id="error-msg" class="text-red-500 font-bold mt-4 text-sm hidden bg-red-50 p-2 rounded-lg border border-red-100">الكود السري غير صحيح أو لا توجد بيانات.</div>
             <div class="loader mt-4" id="login-loader"></div>
         </div>
     </div>
@@ -49,58 +56,71 @@
     <!-- شاشة التقرير (لوحة القيادة) -->
     <div id="dashboard-screen">
         
-        <!-- الهيدر -->
-        <div class="flex flex-col md:flex-row items-center justify-between mb-8 pb-6 border-b-2 border-slate-200">
+        <!-- الهيدر (اسم الطالب) -->
+        <div class="flex flex-col md:flex-row items-center justify-between mb-6">
             <div class="flex items-center mb-4 md:mb-0">
-                <div class="w-20 h-20 bg-slate-800 text-white rounded-full flex items-center justify-center text-3xl shadow-md ml-4">
+                <div class="w-16 h-16 bg-slate-800 text-white rounded-full flex items-center justify-center text-2xl shadow-md ml-4">
                     🔬
                 </div>
                 <div>
-                    <h1 id="st-name" class="text-3xl font-extrabold text-teal-800 mb-1">اسم الطالب</h1>
-                    <p id="st-info" class="text-slate-500 font-bold">المرحلة | الكود</p>
+                    <h1 id="st-name" class="text-2xl font-extrabold text-teal-800 mb-1">اسم الطالب</h1>
+                    <p id="st-info" class="text-slate-500 font-semibold text-sm">المرحلة | الكود: -----</p>
                 </div>
             </div>
-            <div class="text-center md:text-left bg-white px-6 py-3 rounded-xl border border-slate-200 shadow-sm">
-                <p class="text-sm text-slate-400 font-bold">فترة التقرير</p>
-                <p id="st-period" class="text-lg font-extrabold text-slate-700">يوليو (07) - 2026</p>
+            <div class="text-center md:text-left">
+                <p class="text-sm text-slate-400 font-bold">الفترة:</p>
+                <p id="st-period" class="text-lg font-bold text-slate-700">--</p>
             </div>
         </div>
 
-        <!-- الكروت العلوية -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <!-- الكروت العلوية (الرئيسية) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             
             <!-- التقييم العام -->
-            <div class="glass-card p-6 bg-gradient-to-br from-sky-400 to-blue-500 text-white text-center transform hover:-translate-y-1 transition-transform">
-                <h3 class="font-bold text-sky-100 mb-2">التقييم العام</h3>
-                <div class="text-5xl font-extrabold mb-2" id="val-overall">0%</div>
-                <div class="inline-block bg-white/20 px-4 py-1 rounded-full text-sm font-bold backdrop-blur-sm" id="val-grade">ممتاز ✔️</div>
+            <div class="premium-card card-blue p-6 text-center flex flex-col justify-center h-36">
+                <h3 class="font-bold text-blue-50/80 mb-1">التقييم العام</h3>
+                <div class="text-5xl font-extrabold mb-1" id="val-overall">0%</div>
+                <div><span class="inline-block bg-white/20 px-3 py-0.5 rounded-full text-sm font-bold backdrop-blur-sm" id="val-grade">-</span></div>
             </div>
 
             <!-- درجة آخر امتحان -->
-            <div class="glass-card p-6 bg-gradient-to-br from-emerald-400 to-teal-500 text-white text-center transform hover:-translate-y-1 transition-transform">
-                <h3 class="font-bold text-emerald-100 mb-2">درجة آخر امتحان</h3>
-                <div class="text-4xl font-extrabold mt-4" id="val-lastexam">- / -</div>
+            <div class="premium-card card-green p-6 text-center flex flex-col justify-center h-36">
+                <h3 class="font-bold text-teal-50/80 mb-1">درجة آخر امتحان</h3>
+                <div class="text-4xl font-extrabold mt-2" id="val-lastexam">- / -</div>
             </div>
 
-            <!-- الحضور -->
-            <div class="glass-card p-6 text-center flex flex-col justify-center">
-                <h3 class="text-slate-500 font-bold mb-2">نسبة حضور الشهر</h3>
-                <div class="text-4xl font-extrabold text-slate-800 mb-2" id="val-att">0%</div>
+        </div>
+
+        <!-- الكروت السفلية (التفصيلية) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            
+            <!-- نسبة الواجبات -->
+            <div class="premium-card p-4 text-center">
+                <h3 class="text-teal-700 text-sm font-bold mb-2">نسبة إنجاز الواجبات</h3>
+                <div class="text-3xl font-extrabold text-slate-700 mb-2" id="val-hw">0%</div>
+                <div id="trend-hw"></div>
+            </div>
+
+            <!-- نسبة الحضور -->
+            <div class="premium-card p-4 text-center">
+                <h3 class="text-teal-700 text-sm font-bold mb-2">نسبة حضور الشهر</h3>
+                <div class="text-3xl font-extrabold text-slate-700 mb-2" id="val-att">0%</div>
                 <div id="trend-att"></div>
             </div>
 
-            <!-- الواجبات -->
-            <div class="glass-card p-6 text-center flex flex-col justify-center">
-                <h3 class="text-slate-500 font-bold mb-2">نسبة إنجاز الواجبات</h3>
-                <div class="text-4xl font-extrabold text-slate-800 mb-2" id="val-hw">0%</div>
-                <div id="trend-hw"></div>
+            <!-- متوسط الامتحانات -->
+            <div class="premium-card p-4 text-center">
+                <h3 class="text-teal-700 text-sm font-bold mb-2">متوسط الامتحانات</h3>
+                <div class="text-3xl font-extrabold text-slate-700 mb-2" id="val-examaverage">0%</div>
+                <div id="trend-examaverage"></div>
             </div>
+
         </div>
 
         <!-- الرسم البياني -->
-        <div class="glass-card p-6 mb-8">
-            <h3 class="text-center font-bold text-slate-600 mb-4">📊 التطور التراكمي للطالب عبر امتحانات الترم</h3>
-            <div class="h-64 w-full">
+        <div class="premium-card p-5 mb-8">
+            <h3 class="text-center font-bold text-teal-800 text-sm mb-4">📊 التطور التراكمي للطالب عبر امتحانات الترم</h3>
+            <div class="h-56 w-full">
                 <canvas id="examsChart"></canvas>
             </div>
         </div>
@@ -109,33 +129,33 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
             
             <!-- تحليل المعلم (AI) -->
-            <div class="glass-card p-6">
-                <h3 class="font-bold text-lg border-b border-slate-100 pb-3 mb-4 flex items-center">
+            <div class="premium-card p-6 border-t-4 border-t-emerald-500">
+                <h3 class="font-bold text-lg text-slate-700 border-b border-slate-100 pb-2 mb-4 flex items-center">
                     <span class="mr-2 text-xl">🤖</span> تحليل وملاحظات المعلم
                 </h3>
                 
                 <div class="mb-4">
-                    <h4 class="font-bold text-emerald-600 flex items-center mb-1">✅ نقطة قوة:</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed pr-6" id="ai-strength">يتم التحميل...</p>
+                    <h4 class="font-bold text-emerald-600 text-sm mb-1 flex items-center">✅ نقطة قوة:</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed pr-5 border-r-2 border-emerald-200" id="ai-strength">يتم التحميل...</p>
                 </div>
                 
                 <div class="mb-4">
-                    <h4 class="font-bold text-amber-600 flex items-center mb-1">⚠️ نقطة تحتاج متابعة:</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed pr-6" id="ai-weakness">يتم التحميل...</p>
+                    <h4 class="font-bold text-amber-600 text-sm mb-1 flex items-center">⚠️ نقطة تحتاج متابعة:</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed pr-5 border-r-2 border-amber-200" id="ai-weakness">يتم التحميل...</p>
                 </div>
                 
-                <div class="bg-red-50 border-r-4 border-red-500 p-4 rounded-lg mt-6">
-                    <h4 class="font-bold text-red-700 flex items-center mb-1">📌 التوصية القادمة (لولي الأمر):</h4>
-                    <p class="text-red-600 text-sm font-semibold leading-relaxed" id="ai-rec">يتم التحميل...</p>
+                <div class="bg-red-50 border-r-4 border-red-500 p-3 rounded-l-lg mt-4">
+                    <h4 class="font-bold text-red-700 text-sm mb-1">📌 التوصية القادمة (لولي الأمر):</h4>
+                    <p class="text-red-600 text-xs font-semibold leading-relaxed" id="ai-rec">يتم التحميل...</p>
                 </div>
             </div>
 
             <!-- الخط الزمني -->
-            <div class="glass-card p-6">
-                <h3 class="font-bold text-lg border-b border-slate-100 pb-3 mb-4 flex items-center">
-                    <span class="mr-2 text-xl">⏳</span> سجل النشاطات بالشهر المحدد
+            <div class="premium-card p-6 border-t-4 border-t-amber-500">
+                <h3 class="font-bold text-lg text-slate-700 border-b border-slate-100 pb-2 mb-4 flex items-center">
+                    <span class="mr-2 text-xl">⏳</span> سجل النشاطات الأحدث
                 </h3>
-                <div class="relative pl-4 border-r-2 border-slate-200 pr-4" id="timeline-container">
+                <div class="relative pl-4 border-r-2 border-slate-100 pr-4" id="timeline-container">
                     <!-- يتم الحقن بواسطة الجافاسكربت -->
                 </div>
             </div>
@@ -143,9 +163,9 @@
         </div>
         
         <!-- تذييل -->
-        <div class="text-center mt-12 mb-6">
-            <button onclick="logout()" class="text-slate-400 hover:text-red-500 font-bold text-sm transition-colors">🚪 تسجيل خروج</button>
-            <p class="text-xs text-slate-400 mt-2">تم توليد هذا التقرير آلياً بواسطة Smart Student CRM</p>
+        <div class="text-center mt-10 mb-4 border-t border-slate-200 pt-6">
+            <button onclick="logout()" class="bg-slate-200 hover:bg-slate-300 text-slate-600 font-bold text-sm py-2 px-6 rounded-lg transition-colors">🚪 تسجيل خروج</button>
+            <p class="text-xs text-slate-400 mt-3 font-semibold">تم توليد هذا التقرير آلياً بواسطة Smart Student CRM</p>
         </div>
 
     </div>
@@ -156,8 +176,8 @@
         let myChart = null;
 
         function getTrendHTML(trendValue) {
-            if (trendValue > 0) return `<span class="trend-up">⬆️ +${trendValue}% عن السابق</span>`;
-            if (trendValue < 0) return `<span class="trend-down">⬇️ ${trendValue}% عن السابق</span>`;
+            if (trendValue > 0) return `<span class="trend-up">⬆️ +${trendValue}%</span>`;
+            if (trendValue < 0) return `<span class="trend-down">⬇️ ${trendValue}%</span>`;
             return `<span class="trend-neutral">➖ مستقر</span>`;
         }
 
@@ -188,7 +208,7 @@
                 }
             } catch (err) {
                 console.error(err);
-                errorMsg.innerText = "خطأ في الاتصال بقاعدة البيانات. تأكد من رفع التحديث.";
+                errorMsg.innerText = "خطأ في الاتصال. تأكد من رفع ملف التحديث (portal_data.json) في السنتر.";
                 errorMsg.classList.remove('hidden');
             } finally {
                 loader.style.display = 'none';
@@ -198,10 +218,10 @@
         function renderDashboard(student) {
             // البيانات الأساسية
             document.getElementById('st-name').innerText = student.name;
-            document.getElementById('st-info').innerText = `${student.stage} | كود: ${student.code}`;
+            document.getElementById('st-info').innerText = `${student.stage} | الكود: ${student.code}`;
             document.getElementById('st-period').innerText = student.period;
 
-            // الكروت
+            // الكروت العلوية
             document.getElementById('val-overall').innerText = student.overall + '%';
             
             let grade = "جيد";
@@ -213,11 +233,16 @@
 
             document.getElementById('val-lastexam').innerText = student.last_exam_text;
             
+            // الكروت السفلية
             document.getElementById('val-att').innerText = student.metrics.attendance + '%';
             document.getElementById('trend-att').innerHTML = getTrendHTML(student.trends.attendance);
 
             document.getElementById('val-hw').innerText = student.metrics.homework + '%';
             document.getElementById('trend-hw').innerHTML = getTrendHTML(student.trends.homework);
+
+            // إضافة متوسط الامتحانات
+            document.getElementById('val-examaverage').innerText = student.metrics.exams + '%';
+            document.getElementById('trend-examaverage').innerHTML = getTrendHTML(student.trends.exams);
 
             // الذكاء الاصطناعي
             document.getElementById('ai-strength').innerText = student.ai.strength;
@@ -232,10 +257,10 @@
                 student.timeline.forEach(item => {
                     let dotColor = item.type === 'good' ? 'bg-emerald-500' : (item.type === 'bad' ? 'bg-red-500' : 'bg-amber-500');
                     let tlHTML = `
-                        <div class="mb-4 relative">
-                            <div class="absolute -right-[23px] w-3 h-3 rounded-full ${dotColor} mt-1.5 ring-4 ring-white"></div>
+                        <div class="mb-3 relative">
+                            <div class="absolute -right-[21px] w-2.5 h-2.5 rounded-full ${dotColor} mt-1 ring-2 ring-white"></div>
                             <p class="text-sm font-bold text-slate-700">${item.text}</p>
-                            <p class="text-xs text-slate-400">${item.date}</p>
+                            <p class="text-[11px] text-slate-400 font-semibold">${item.date}</p>
                         </div>
                     `;
                     tlContainer.innerHTML += tlHTML;
@@ -253,11 +278,11 @@
                 data: {
                     labels: student.chart.labels,
                     datasets: [{
-                        label: 'درجة الامتحان',
+                        label: 'الدرجة',
                         data: student.chart.data,
-                        backgroundColor: '#14b8a6', // Teal 500
+                        backgroundColor: '#20E2D7', // اللون الأخضر المطابق لآخر امتحان
                         borderRadius: 4,
-                        barThickness: 30
+                        barThickness: 25
                     }]
                 },
                 options: {
@@ -268,10 +293,12 @@
                         y: {
                             beginAtZero: true,
                             max: student.chart.max,
-                            grid: { color: '#f1f5f9' }
+                            grid: { color: '#f1f5f9' },
+                            ticks: { font: { family: 'Cairo' } }
                         },
                         x: {
-                            grid: { display: false }
+                            grid: { display: false },
+                            ticks: { font: { family: 'Cairo' } }
                         }
                     }
                 }
